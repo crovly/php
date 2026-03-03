@@ -9,17 +9,18 @@ class VerifyResponse
     public readonly bool $success;
     public readonly float $score;
     public readonly string $ip;
-    public readonly string $solvedAt;
+    /** @var int Unix timestamp in milliseconds */
+    public readonly int $solvedAt;
 
     /**
-     * @param array{success: bool, score: float, ip: string, solvedAt: string} $data
+     * @param array{success: bool, score: float, ip: string, solvedAt: int} $data
      */
     public function __construct(array $data)
     {
         $this->success = (bool) ($data['success'] ?? false);
         $this->score = (float) ($data['score'] ?? 0.0);
         $this->ip = (string) ($data['ip'] ?? '');
-        $this->solvedAt = (string) ($data['solvedAt'] ?? '');
+        $this->solvedAt = (int) ($data['solvedAt'] ?? 0);
     }
 
     /**

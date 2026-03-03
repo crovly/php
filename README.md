@@ -88,7 +88,7 @@ if ($response->isHuman(0.3)) {
 | `success`  | `bool`   | Whether the token is valid                 |
 | `score`    | `float`  | Risk score (0.0 = bot, 1.0 = human)       |
 | `ip`       | `string` | IP address that solved the challenge       |
-| `solvedAt` | `string` | ISO 8601 timestamp of when it was solved   |
+| `solvedAt` | `int`    | Unix timestamp in milliseconds             |
 
 ## Laravel Integration
 
