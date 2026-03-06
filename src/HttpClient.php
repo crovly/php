@@ -10,7 +10,7 @@ use Crovly\Exceptions\ValidationException;
 
 class HttpClient
 {
-    private const SDK_VERSION = '1.0.0';
+    private const SDK_VERSION = '1.0.1';
 
     private string $secretKey;
     private string $baseUrl;
